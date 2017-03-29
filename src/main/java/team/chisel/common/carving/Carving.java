@@ -178,7 +178,7 @@ public class Carving implements ICarvingRegistry {
 	}
 
 	private @Nullable ICarvingGroup getOreGroup(@Nullable ItemStack stack) {
-		if(stack != null)
+		if(stack != null && !stack.isEmpty())
 		{
 			int[] ids = OreDictionary.getOreIDs(stack);
 			if (ids.length > 0) {
